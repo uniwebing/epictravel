@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Epic Travel</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media-tablet.css">
+    <link rel="stylesheet" href="./css/media-mobile.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+<body class="sticky-footer">
+    
+    <header class="header header-bg" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html"> <img src="./img/logo.svg" alt="epic travel"> </a>
+                <ul class="nav-list">
+                    <li> <a href="index.html">Главная</a> </li>
+                    <li> <a href="tours.html">Туры</a> </li>
+                    <li> <a href="about.html">О компании</a> </li>
+                    <li> <a href="contacts.html" class="active">Контакты</a> </li>
+                </ul>
+                <button class="btn-mobile-nav" id="btn-mobile-nav" type="button">
+                    <!-- type=button это просто кнопка с функционалом/интерактив, не отправляет -->
+                    <img src="./img/icons/open-mobile-nav.svg" id="mobile-nav-img" alt="Open nav">
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li> <a href="index.html">Главная</a> </li>
+            <li> <a href="tours.html">Туры</a> </li>
+            <li> <a href="about.html">О компании</a> </li>
+            <li> <a href="contacts.html">Контакты</a> </li>
+        </ul>
+        
+    </nav>
+
+    <main class="inner-page">
+        
+        <div class="container">
+            <div class="inner-page-title-wrapper">
+                <h1 class="title-1 text-center">Контакты</h1>
+            </div>
+
+            <div class="contacts-columns">
+
+                <form class="form-wrapper">
+                    <h2 class="title-2">Заявка на подбор тура</h2>
+
+                    <section class="form-group">
+                        <h3 class="title-3">Личные данные</h3>
+                        <div class="inputs-wrapper">
+                            <input type="text" class="input" placeholder="Введите имя" name="name">
+                            <input type="tel" class="input input-50" placeholder="Телефон" name="phone">
+                            <input type="email" class="input input-50" placeholder="Email" name="email">
+                        </div>
+                    </section>
+
+                    <section class="form-group">
+                        <h3 class="title-3">Количество человек для тура</h3>
+                        <ul class="radio-list">
+                            <li>
+                                <label>
+                                    <input type="radio" class="real-radio visually-hidden" name="number" value="2-4">
+                                    <span class="fake-radio"></span>
+                                    2 - 4 человека
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" class="real-radio visually-hidden" name="number" value="5-10">
+                                    <span class="fake-radio"></span>
+                                    5 - 10 человек
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" class="real-radio visually-hidden" name="number" value="11+">
+                                    <span class="fake-radio"></span>
+                                    11 человек и более
+                                </label>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="form-group">
+                        <h3 class="title-3">Какие направления вам интересны</h3>
+                        <ul class="checkbox-list">
+                            <li>
+                                <label>
+                                    <input type="checkbox" class="real-checkbox visually-hidden" name="tracking">
+                                    <span class="fake-checkbox"></span>
+                                    Трекинг туры, походы по горам и пересеченной местности.
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" class="real-checkbox visually-hidden" name="mountains">
+                                    <span class="fake-checkbox"></span>
+                                    Восхождения на вершины.
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" class="real-checkbox visually-hidden" name="exotic">
+                                    <span class="fake-checkbox"></span>
+                                    Экзотические джунгли, вулканы.
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" class="real-checkbox visually-hidden" name="combi">
+                                    <span class="fake-checkbox"></span>
+                                    Комбинированные: море, горы, города, лес.
+                                </label>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <button class="submit-btn" type="submit">Отправить заявку</button>
+                </form>
+                    
+                <section class="address-wrapper">
+                    <div class="address-item">
+                        <h2 class="title-2">Телефон и адрес</h2>
+                        <address>
+                            <ul class="address-list">
+                                <li><img src="./img/icons/phone.svg" alt="Телефон">+7 (905) 456-12-34</li>
+                                <li><img src="./img/icons/mail.svg" alt="Емайл">info@epictravel.ru</li>
+                                <li><img src="./img/icons/map.svg" alt="Адрес">г. Москва, Рязанский проспект 54, офис 112.</li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="address-item">
+                        <h2 class="title-2">Карта</h2>
+                        <!-- <img src="./img/contacts/map.jpg" srcset="./img/contacts/map@2x.jpg 2x" alt="Карта"> -->
+
+                        <!-- карта стролится -->
+                        <iframe class="yandex-map"
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ae68e80e26ec8908319f27f0a7c5f49fb58d2ba9a97deb98fc27512e14dd3c7&amp;source=constructor" style="border: none;"></iframe>
+
+                        <!-- карта iframe не скролится добавляем в конце из JS &amp;scroll=false для мобильных устройств-->
+                        <!-- <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ae68e80e26ec8908319f27f0a7c5f49fb58d2ba9a97deb98fc27512e14dd3c7&amp;source=constructor&amp;scroll=false"
+                            width="470" height="345" frameborder="0"></iframe> -->
+
+                        <!-- карта JS для работы через API не знаю как это пока скролится -->
+                        <!-- <script type="text/javascript" charset="utf-8" async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4ae68e80e26ec8908319f27f0a7c5f49fb58d2ba9a97deb98fc27512e14dd3c7&amp;width=470&amp;height=345&amp;lang=ru_RU&amp;scroll=true"></script> -->
+
+                        <!-- карта JS не скролится добавляем вместо &amp;scroll=true вот это &amp;scroll=false-->
+                        <!-- <script type="text/javascript" charset="utf-8" async
+                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4ae68e80e26ec8908319f27f0a7c5f49fb58d2ba9a97deb98fc27512e14dd3c7&amp;width=470&amp;height=345&amp;lang=ru_RU&amp;scroll=false"></script> -->
+
+
+                        <!-- google карты средняя размер width="600" height="450" меняем вручную не скролится -->
+                            <!-- <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.4498074961193!2d37.79292181223885!3d55.715934772958235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab59b3be61f9b%3A0x8e6799da30ecf98a!2z0KDRj9C30LDQvdGB0LrQuNC5INC_0YAuLCA1NCwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwOTM3Nw!5e0!3m2!1sru!2skz!4v1733486994091!5m2!1sru!2skz"
+                                width="470" height="345" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-copyright">
+                    <p>2024 © ЭпикТрэвел. <br class="desktop-only">Все права защищены</p>
+                </div>
+                <address class="footer-contacts">
+                    <a href="tel:+79054561234" class="footer-phone">+7 (905) 456-12-34</a><br>
+                    <a href="mailto:info@epictravel.ru" class="footer-email">info@epictravel.ru</a><br>
+                    <p class="footer-address">г. Москва, Рязанский проспект 54, офис 112</p>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
